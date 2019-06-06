@@ -1,10 +1,6 @@
-function addZero(i) 
+var addZero = function(i) 
 {
-    if (i < 10) 
-    {
-        i = "0" + i;
-    }
-    return i;
+    return ( i < 10 ) ? "0" + i  :  i;
 }
 
 function clock()
@@ -14,8 +10,8 @@ function clock()
     var minutes = addZero(date.getMinutes());
     var seconds = addZero(date.getSeconds());
 
-    document.getElementById("header-clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.querySelector("#header-clock").innerHTML = hours + ":" + minutes + ":" + seconds;
 }
 
 setInterval(clock, 1000);
-window.onload = clock();
+clock();
