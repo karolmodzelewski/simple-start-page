@@ -1,45 +1,25 @@
+*
+{
+    margin: 0;
+}
+
 body, html
 {
     background-color: #5f27cd;
     font-family: 'Lato', sans-serif;
     color: #f5f5f5;
     font-weight: bold;
-    margin: 0 auto;
 }
 
-.header-container
+a:visited, a:link
 {
-    width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 30vh;
-    background-color: black;
-    display: flex;
-    margin-top: 25px;
-    align-items: center;
-    justify-content: center;
+    color: #f5f5f5;
+    text-decoration: none;
 }
 
-.header-content
+a:hover, a:active
 {
-    display: flex;
-    text-align: center;
-    font-size: 30px;
-    flex-direction: column;
-}
-
-.header-content span
-{
-    padding-bottom: 10px;
-}
-
-.section-container
-{
-    width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: auto;
-    height: 65vh;
+    color: #f5f5f5;
 }
 
 .grid
@@ -78,36 +58,71 @@ body, html
 .material-icons.md60
 {
     font-size: 60px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px 0;
 }
 
-.section-title
+/* Header */
+
+.header-container
+{
+    width: 1400px;
+    height: 30vh;
+    margin: 25px auto 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content
+{
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-content p, .header-content span
+{
+    padding-bottom: 10px;
+}
+
+/* Main */
+
+.main-container
+{
+    width: 1400px;
+    height: 65vh;
+    max-height: auto;
+    margin: 0 auto 0;
+}
+
+.main-title
 {
     font-size: 30px;
     padding: 5px;
     align-self: flex-end;
-    border-bottom: 3px solid rgba(66, 178, 255, 0.3);
+    border-bottom: 3px solid rgba(66, 178, 255, .3);
 }
 
-.section-element
+.main-element
 {
     font-size: 20px;
 }
 
-.section-element a
+.main-element a
 {
     padding-left: 20px;
     border-left: 2px solid rgba(66, 178, 193);
 }
 
-.section-element:hover
+.main-element:hover
 {
     background-color: #7149c1;
     transition: all .4s ease;
 }
 
-.section-link
+.main-link
 {
     font-size: 15px;
     display: block;
@@ -115,16 +130,7 @@ body, html
     word-break: break-all;
 }
 
-a:visited, a:link
-{
-    color: #f5f5f5;
-    text-decoration: none;
-}
-
-a:hover, a:active
-{
-    color: #f5f5f5;
-}
+/* Footer */
 
 footer
 {
@@ -135,23 +141,18 @@ footer
     text-align: center;
 }
 
+/* Media queries */
+
 @media only screen and (max-width: 1440px)
 {
-    body, html
+    *
     {
         overflow-x: hidden; 
     }
 
-    .header-container
+    .header-container, .section-container
     {
-        max-width: 1440px;
-        width: auto;
-    }
-
-    .section-container
-    {
-        max-width: 1440px;
-        max-height: auto;
+        max-width: 1400px;
         width: auto;
     }
 
@@ -168,7 +169,6 @@ footer
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(8, minmax(100px, auto));
         padding: 10px;
-        grid-gap: 10px;
     }
 
     .item-1{ grid-column: 1 / 2; grid-row: 1 / 2; }
@@ -187,12 +187,7 @@ footer
     .item-14{ grid-column: 2 / 3; grid-row: 7 / 8; }
     .item-15{ grid-column: 2 / 3; grid-row: 8 / 9; }
 
-    .header-container
-    {
-        max-width: 1024px;
-    }
-
-    .section-container
+    .header-container, .section-container
     {
         max-width: 1024px;
     }
@@ -200,12 +195,7 @@ footer
 
 @media only screen and (max-width: 768px)
 {
-    .header-container
-    {
-        max-width: 768px;
-    }
-
-    .section-container
+    .header-container, .section-container
     {
         max-width: 768px;
     }
@@ -217,8 +207,6 @@ footer
     {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(15, minmax(100px, auto));
-        padding: 10px;
-        grid-gap: 10px;
     }
 
     .item-1{ grid-column: 1 / 2; grid-row: 1 / 2; }
@@ -237,12 +225,7 @@ footer
     .item-14{ grid-column: 1 / 2; grid-row: 14 / 15; }
     .item-15{ grid-column: 1 / 2; grid-row: 15 / 16; }
 
-    .header-container
-    {
-        max-width: 480px;
-    }
-
-    .section-container
+    .header-container, .section-container
     {
         max-width: 480px;
     }
@@ -250,12 +233,7 @@ footer
 
 @media only screen and (max-width: 320px)
 {
-    .header-container
-    {
-        max-width: 320px;
-    }
-
-    .section-container
+    .header-container, .section-container
     {
         max-width: 320px;
     }
