@@ -2,23 +2,36 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/purple_theme.css" id="defaultTemplate">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="icon" href="assets/img/favicon.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="description" content="Simple start page based on grid">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="startpage, homepage">
         <title>My Startpage</title>
     </head>
     <body>
-        <header class="header-container">
-            
-            <div class="header-content">
-                <button id="polishButton" onclick="pl()" style="padding: 5px; margin: 1px;"></button>
-                <button id="englishButton" onclick="eng()" style="padding: 5px; margin: 1px;"></button>
-                <p id="current_hour"></p>
+        <header class="grid">
+            <div id="templates-container" class="header-container">
+                <p id="change-template"></p>
+                <div class="header-button-container">
+                    <button id="template-one" class="header-button" onclick="templateOne()"></button>
+                    <button id="template-two" class="header-button" onclick="templateTwo()"></button>
+                    <button id="template-three" class="header-button" onclick="templateThree()"></button>
+                </div>
+            </div>
+            <div id="clock-container" class="header-container">
+                <p id="current-hour"></p>
                 <span id="header-clock"></span>
+            </div>
+            <div id="languages-container" class="header-container">
+                <p id="change-language"></p>
+                <div class="header-button-container">
+                    <button id="polishButton" class="header-button" onclick="pl()"></button>
+                    <button id="englishButton" class="header-button" onclick="eng()"></button>
+                </div>
             </div>
         </header>
         <main class="main-container">
@@ -142,9 +155,9 @@
                 </a>
             </div>
         </main>
-        <footer>
+        <!-- <footer>
             <p>Simple Startpage based on grid</p>
-        </footer>
+        </footer> -->
 
         <script src="assets/js/clock.js"></script>
         <script src="assets/js/cookies.js"></script>
