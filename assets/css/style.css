@@ -104,14 +104,6 @@ a:hover, a:active
     margin: 0 auto 0;
 }
 
-.main-title
-{
-    font-size: 30px;
-    padding: 5px;
-    align-self: flex-end;
-    border-bottom: 3px solid rgba(66, 178, 255, .3);
-}
-
 .main-element
 {
     padding-left: 20px;
@@ -137,6 +129,14 @@ a:hover, a:active
     display: block;
     color: rgb(66, 178, 255);
     word-break: break-all;
+}
+
+.main-title
+{
+    font-size: 30px;
+    padding: 5px;
+    align-self: flex-end;
+    border-bottom: 3px solid rgba(66, 178, 255, .3);
 }
 
 /* Footer */
