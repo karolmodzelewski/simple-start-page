@@ -1,0 +1,45 @@
+body, html
+{
+    background: #5f27cd;
+    color: #f5f5f5;
+}
+
+a:visited, a:link, a:hover, a:active
+{
+    color: #f5f5f5;
+}
+
+.grid-item:hover:not(.main-title)
+{
+    background-color: #7149c1;
+}
+
+header
+{
+    background: #000;
+}
+
+.header-container
+{
+    background: #7149c1;
+}
+
+.header-container span
+{
+    color: rgb(66, 178, 255);
+}
+
+.main-element
+{
+    border-left: 2px solid rgba(66, 178, 193);
+}
+
+.main-link
+{
+    color: rgb(66, 178, 255);
+}
+
+.main-title
+{
+    border-bottom: 3px solid rgba(66, 178, 255, .3);
+}
