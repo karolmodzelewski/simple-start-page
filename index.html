@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="icon" href="">
+        <link rel="icon" href="assets/img/favicon.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="description" content="Simple start page based on grid">
@@ -13,60 +13,144 @@
     </head>
     <body>
         <header class="header-container">
+            
             <div class="header-content">
-                <p>Current hour:</p>
+                <button id="polishButton" onclick="pl()" style="padding: 5px; margin: 1px;"></button>
+                <button id="englishButton" onclick="eng()" style="padding: 5px; margin: 1px;"></button>
+                <p id="current_hour"></p>
                 <span id="header-clock"></span>
             </div>
         </header>
         <main class="main-container">
             <div class="grid">
-                <div class="grid-item item-1 main-title"><h4>Social Media</h4></div>
-                <div class="grid-item item-2 main-element">
-                    <i class="material-icons md60">person_outline</i><a target="_blank" href="https://www.facebook.com/">Facebook <span class="main-link">https://www.facebook.com/</span></a>
-                </div>
-                <div class="grid-item item-3 main-element">
-                    <i class="material-icons md60">message</i><a target="_blank" href="https://twitter.com/">Twitter <span class="main-link">https://twitter.com/</span></a>
-                </div>
-                <div class="grid-item item-4 main-element">
-                    <i class="material-icons md60">photo_camera</i><a target="_blank" href="https://www.instagram.com/">Instagram <span class="main-link">https://www.instagram.com/</span></a>
-                </div>
+                <div class="grid-item item-1 main-title"><h4 id="media"></h4></div>
 
-                <div class="grid-item item-5 main-title"><h4>Entertainment</h4></div>
-                <div class="grid-item item-6 main-element">
-                    <i class="material-icons md60">video_library</i><a target="_blank" href="https://www.youtube.com/">YouTube <span class="main-link">https://www.youtube.com/</span></a>
-                </div>
-                <div class="grid-item item-7 main-element">
-                    <i class="material-icons md60">visibility</i><a target="_blank" href="https://www.twitch.tv/">Twitch <span class="main-link">https://www.twitch.tv/</span></a>
-                </div>
-                <div class="grid-item item-8 main-element">
-                    <i class="material-icons md60">chat</i><a target="_blank" href="https://www.reddit.com/">Reddit <span class="main-link">https://www.reddit.com/</span></a>
-                </div>
+                <a target="_blank" href="https://www.facebook.com/" class="grid-item item-2">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">person_outline</i>
+                        <div class="main-element">
+                            <p>Facebook</p> 
+                            <span class="main-link">https://www.facebook.com/</span>
+                        </div>
+                    </div>
+                </a>
 
-                <div class="grid-item item-9 main-title"><h4>Other</h4></div>
-                <div class="grid-item item-10 main-element">
-                    <i class="material-icons md60">favorite_border</i><a target="_blank" href="https://www.anime-planet.com/users/15Neme">Anime-Planet <span class="main-link">https://www.anime-planet.com/</span></a>
-                </div>
-                <div class="grid-item item-11 main-element">
-                    <i class="material-icons md60">share</i><a target="_blank" href="https://steamcommunity.com/id/15Neme/">Steam <span class="main-link">https://steamcommunity.com/</span></a>
-                </div>
+                <a target="_blank" href="https://twitter.com/" class="grid-item item-3">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">message</i>
+                        <div class="main-element">
+                            <p>Twitter</p> 
+                            <span class="main-link">https://twitter.com/</span>
+                        </div>
+                    </div>
+                </a>
 
-                <div class="grid-item item-12 main-title"><h4>Main</h4></div>
-                <div class="grid-item item-13 main-element">
-                    <i class="material-icons md60">mail</i><a target="_blank" href="https://mail.google.com/mail/u/0/">Gmail <span class="main-link">https://mail.google.com/</span></a>
-                </div>
-                <div class="grid-item item-14 main-element">
-                    <i class="material-icons md60">code</i><a target="_blank" href="https://github.com/karolmodzelewski">Github <span class="main-link">https://github.com/</span></a>
-                </div>
-                <div class="grid-item item-15 main-element">
-                    <i class="material-icons md60">person</i><a target="_blank" href="https://www.linkedin.com/in/karol-modzelewski-670a7917a/">Linkedin <span class="main-link">https://www.linkedin.com/</span></a>
-                </div>
+                <a target="_blank" href="https://www.instagram.com/" class="grid-item item-4">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">photo_camera</i>
+                        <div class="main-element">
+                            <p>Instagram</p> 
+                            <span class="main-link">https://www.instagram.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="grid-item item-5 main-title"><h4 id="entertainment"></h4></div>
+
+                <a target="_blank" href="https://www.youtube.com/" class="grid-item item-6">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">video_library</i>
+                        <div class="main-element">
+                            <p>YouTube</p> 
+                            <span class="main-link">https://www.youtube.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://www.twitch.tv/" class="grid-item item-7">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">visibility</i>
+                        <div class="main-element">
+                            <p>Twitch</p> 
+                            <span class="main-link">https://www.twitch.tv/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://www.reddit.com/" class="grid-item item-8">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">chat</i>
+                        <div class="main-element">
+                            <p>Reddit</p> 
+                            <span class="main-link">https://www.reddit.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="grid-item item-9 main-title"><h4 id="other"></h4></div>
+                
+                <a target="_blank" href="https://www.anime-planet.com/users/15Neme" class="grid-item item-10">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">favorite_border</i>
+                        <div class="main-element">
+                            <p>Anime-Planet</p> 
+                            <span class="main-link">https://www.anime-planet.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://steamcommunity.com/id/15Neme/" class="grid-item item-11">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">share</i>
+                        <div class="main-element">
+                            <p>Steam</p> 
+                            <span class="main-link">https://steamcommunity.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="grid-item item-12 main-title"><h4 id="main"></h4></div>
+
+                <a target="_blank" href="https://mail.google.com/mail/u/0/" class="grid-item item-13">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">mail</i>
+                        <div class="main-element">
+                            <p>Gmail</p> 
+                            <span class="main-link">https://mail.google.com/</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://github.com/karolmodzelewski" class="grid-item item-14">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">code</i>
+                        <div class="main-element">
+                            <p>Github</p> 
+                            <span class="main-link">https://github.com/</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://www.linkedin.com/in/karol-modzelewski-670a7917a/" class="grid-item item-15">
+                    <div class="main-element-container">
+                        <i class="material-icons md60">person</i>
+                        <div class="main-element">
+                            <p>Linkedin</p> 
+                            <span class="main-link">https://www.linkedin.com/</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </main>
         <footer>
             <p>Simple Startpage based on grid</p>
         </footer>
 
-        <script src="clock.js"></script>
+        <script src="assets/js/clock.js"></script>
+        <script src="assets/js/cookies.js"></script>
+        <script src="assets/js/languages.js"></script>
+        <script src="assets/js/translate.js"></script>
+        <script src="assets/js/templates.js"></script>
 
     </body>
 </html>
