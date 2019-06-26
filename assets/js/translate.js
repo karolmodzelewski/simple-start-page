@@ -24,7 +24,8 @@ function pl()
 
 function translate(language) 
 {
-  Object.keys(translations[language]).forEach(function(key) {
+  Object.keys(translations[language]).forEach(function(key) 
+  {
     document.querySelector("#" + key).innerText = translations[language][key];
   });
 }

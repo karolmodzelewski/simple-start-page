@@ -2,33 +2,33 @@ var translations =
 {
   "polish": 
   {
-    "template-one": "JEDEN",
-    "template-two": "DWA",
-    "template-three": "TRZY",
+    "button-polish": "Polski",
+    "button-english": "Angielski",
+    "current-hour": "Godzina:",
+    "template-one": "Fioletowy",
+    "template-two": "Szary",
+    "template-three": "Zielony",
     "change-template": "Zmień styl:",
     "change-language": "Zmień język:",
-    "polishButton": "Polski",
-    "englishButton": "Angielski",
-    "current-hour": "Godzina:",
-    "media": "Media społecznościowe",
-    "entertainment": "Rozrywka",
-    "other": "Inne",
-    "main": "Główne"
+    "main-title-media": "Media społecznościowe",
+    "main-title-entertainment": "Rozrywka",
+    "main-title-other": "Inne",
+    "main-title-main": "Główne"
   },
 
   "english": 
   {
-    "template-one": "ONE",
-    "template-two": "TWO",
-    "template-three": "THREE",
+    "button-polish": "Polish",
+    "button-english": "English",
+    "current-hour": "Current hour:",
+    "template-one": "Purple",
+    "template-two": "Grey",
+    "template-three": "Green",
     "change-template": "Change template:",
     "change-language": "Change language:",
-    "polishButton": "Polish",
-    "englishButton": "English",
-    "current-hour": "Current hour:",
-    "media": "Social Media",
-    "entertainment": "Entertainment",
-    "other": "Other",
-    "main": "Main"
+    "main-title-media": "Social Media",
+    "main-title-entertainment": "Entertainment",
+    "main-title-other": "Other",
+    "main-title-main": "Main"
   }
 }
