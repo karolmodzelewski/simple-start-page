@@ -7,14 +7,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="icon" href="assets/img/favicon.png">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Simple start page based on grid">
         <meta name="keywords" content="startpage, homepage">
         <title>My Startpage</title>
     </head>
     <body>
-        <header class="grid">
-            <div id="templates-container" class="header-container">
+        <header class="grid header-grid">
+            <div id="header-templates-container" class="header-container">
                 <p id="change-template"></p>
                 <div class="header-button-container">
                     <button id="template-one" class="header-button" onclick="templateOne()"></button>
@@ -22,23 +22,22 @@
                     <button id="template-three" class="header-button" onclick="templateThree()"></button>
                 </div>
             </div>
-            <div id="clock-container" class="header-container">
+            <div id="header-clock-container" class="header-container">
                 <p id="current-hour"></p>
-                <span id="header-clock"></span>
+                <span id="clock"></span>
             </div>
-            <div id="languages-container" class="header-container">
+            <div id="header-languages-container" class="header-container">
                 <p id="change-language"></p>
                 <div class="header-button-container">
-                    <button id="polishButton" class="header-button" onclick="pl()"></button>
-                    <button id="englishButton" class="header-button" onclick="eng()"></button>
+                    <button id="button-polish" class="header-button" onclick="pl()"></button>
+                    <button id="button-english" class="header-button" onclick="eng()"></button>
                 </div>
             </div>
         </header>
         <main class="main-container">
             <div class="grid">
-                <div class="grid-item item-1 main-title"><h4 id="media"></h4></div>
-
-                <a target="_blank" href="https://www.facebook.com/" class="grid-item item-2">
+                <div id="item-1" class="grid-item main-title"><h4 id="main-title-media"></h4></div>
+                <a target="_blank" href="https://www.facebook.com/" id="item-2" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">person_outline</i>
                         <div class="main-element">
@@ -47,8 +46,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://twitter.com/" class="grid-item item-3">
+                <a target="_blank" href="https://twitter.com/" id="item-3" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">message</i>
                         <div class="main-element">
@@ -57,8 +55,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://www.instagram.com/" class="grid-item item-4">
+                <a target="_blank" href="https://www.instagram.com/" id="item-4" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">photo_camera</i>
                         <div class="main-element">
@@ -67,10 +64,8 @@
                         </div>
                     </div>
                 </a>
-
-                <div class="grid-item item-5 main-title"><h4 id="entertainment"></h4></div>
-
-                <a target="_blank" href="https://www.youtube.com/" class="grid-item item-6">
+                <div id="item-5" class="grid-item main-title"><h4 id="main-title-entertainment"></h4></div>
+                <a target="_blank" href="https://www.youtube.com/" id="item-6" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">video_library</i>
                         <div class="main-element">
@@ -79,8 +74,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://www.twitch.tv/" class="grid-item item-7">
+                <a target="_blank" href="https://www.twitch.tv/" id="item-7" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">visibility</i>
                         <div class="main-element">
@@ -89,8 +83,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://www.reddit.com/" class="grid-item item-8">
+                <a target="_blank" href="https://www.reddit.com/" id="item-8" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">chat</i>
                         <div class="main-element">
@@ -99,10 +92,8 @@
                         </div>
                     </div>
                 </a>
-
-                <div class="grid-item item-9 main-title"><h4 id="other"></h4></div>
-                
-                <a target="_blank" href="https://www.anime-planet.com/users/15Neme" class="grid-item item-10">
+                <div id="item-9" class="grid-item main-title"><h4 id="main-title-other"></h4></div>
+                <a target="_blank" href="https://www.anime-planet.com/users/15Neme" id="item-10" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">favorite_border</i>
                         <div class="main-element">
@@ -111,8 +102,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://steamcommunity.com/id/15Neme/" class="grid-item item-11">
+                <a target="_blank" href="https://steamcommunity.com/id/15Neme/" id="item-11" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">share</i>
                         <div class="main-element">
@@ -121,10 +111,8 @@
                         </div>
                     </div>
                 </a>
-
-                <div class="grid-item item-12 main-title"><h4 id="main"></h4></div>
-
-                <a target="_blank" href="https://mail.google.com/mail/u/0/" class="grid-item item-13">
+                <div id="item-12" class="grid-item main-title"><h4 id="main-title-main"></h4></div>
+                <a target="_blank" href="https://mail.google.com/mail/u/0/" id="item-13" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">mail</i>
                         <div class="main-element">
@@ -133,8 +121,7 @@
                         </div>
                     </div>
                 </a>
-
-                <a target="_blank" href="https://github.com/karolmodzelewski" class="grid-item item-14">
+                <a target="_blank" href="https://github.com/karolmodzelewski" id="item-14" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">code</i>
                         <div class="main-element">
@@ -143,8 +130,7 @@
                         </div>
                     </div>
                 </a>
-                
-                <a target="_blank" href="https://www.linkedin.com/in/karol-modzelewski-670a7917a/" class="grid-item item-15">
+                <a target="_blank" href="https://www.linkedin.com/in/karol-modzelewski-670a7917a/" id="item-15" class="grid-item">
                     <div class="main-element-container">
                         <i class="material-icons md60">person</i>
                         <div class="main-element">
@@ -155,10 +141,9 @@
                 </a>
             </div>
         </main>
-        
-        <!-- <footer>
+        <footer>
             <p>Simple Startpage based on grid</p>
-        </footer> -->
+        </footer>
 
         <script src="assets/js/clock.js"></script>
         <script src="assets/js/cookies.js"></script>
