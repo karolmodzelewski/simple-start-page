@@ -43,3 +43,8 @@ header
 {
     border-bottom: 3px solid rgba(66, 178, 255, .3);
 }
+
+footer
+{
+    background: #000;
+}
